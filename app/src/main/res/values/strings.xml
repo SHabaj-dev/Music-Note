@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Music Note</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_now_playing">Now Playing</string>
+    <string name="title_playlist">All Songs</string>
+    <string name="title_fav">Favourite Songs</string>
+    <string name="song_name">Song Name</string>
+    <string name="play">Play</string>
+</resources>

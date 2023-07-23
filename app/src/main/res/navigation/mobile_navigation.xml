@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_now_playing">
+
+    <fragment
+        android:id="@+id/navigation_now_playing"
+        android:name="com.sbz.musicnote.ui.nowPlaying.NowPlayingFragment"
+        android:label="@string/title_now_playing"
+        tools:layout="@layout/fragment_now_playing" />
+
+    <fragment
+        android:id="@+id/navigation_all_songs"
+        android:name="com.sbz.musicnote.ui.allSongs.AllSongsFragment"
+        android:label="@string/title_playlist"
+        tools:layout="@layout/fragment_all_songs">
+        <action
+            android:id="@+id/action_allSongsFragment_to_nowPlayingFragment"
+            app:destination="@id/navigation_now_playing"
+            app:popUpTo="@id/navigation_all_songs"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_fav"
+        android:name="com.sbz.musicnote.ui.favSongs.FavFragment"
+        android:label="@string/title_fav"
+        tools:layout="@layout/fragment_fav_songs" />
+</navigation>
